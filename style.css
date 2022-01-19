@@ -94,14 +94,14 @@ main{
 /* GALERIA */
 
 /*
-    Max-width de 70 para nao cortar
+    Max-width de 60 para nao cortar
     minha ultima img
 */
 
 .galeria{
     display: flex;
     
-    max-width: 70vw;
+    max-width: 60vw;
     padding: 10px;
 
     overflow-x: auto;
@@ -174,4 +174,63 @@ main{
 
 .contactMe ul img{
     width: 150px;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 810px) {
+    body{
+        padding-left: 0;
+    }
+    
+   aside{
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+
+       align-items: center;
+
+       border: 0;
+
+       width: 100vw;
+
+       padding-top: 10px;
+   }
+
+   aside .descricao{
+       display: flex;
+       align-items: center;
+
+       gap: 10px;
+   }
+
+   aside .descricao img{
+       width: 100px;
+   }
+
+   aside nav ul{
+       display: flex;
+
+       gap: 10px;
+   }
+
+   main{
+       margin-top: 200px;
+   }
+
+   .galeria{
+       max-width: 80vw;
+   }
+
+   .aboutMe p{
+        width: 80vw;
+    }
+
+   .contactMe ul{
+       display: flex;
+       flex-wrap: wrap;
+   }
+   
+    
+    
 }
