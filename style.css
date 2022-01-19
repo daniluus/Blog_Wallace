@@ -1,101 +1,177 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/*
+    * padding-left pro meu main
+        sair debaixo do aside
+*/
+
 body{
     background-color: #0A0B1F;
     color: #fff;
 
     font-family: 'Inter', sans-serif;
-}
 
-/* ======= CONTAINER ======== */
+    padding-left: 25vw;
+
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
+}
 
 .container{
     display: flex;
-
     gap: 50px;
-
 }
 
+/* ASIDE */
 
-/* ======= SIDEBAR ======== */
+/*
+    * position fixed meu aside
+    vai pra frente e o main
+    ocupou o espaço abaixo do aside
+*/
 
-.sidebarContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+aside {
+    position: fixed;
+    left: 0;
 
-    width: 30vw;
+    width: 25vw;
     height: 100vh;
-
-    align-items: center;
-    text-align: center;
-    
-    padding: 2rem;    
-
     border-right: .5px solid #38444d;
 
-    box-shadow: 20px 0 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+    padding-top: 50px;
 }
 
-/* ======= PROFILE ======== */
-
-.profile a{
-    color: #fff;
-}
-
-.profile a h1{
+.descricao h1{
     font-weight: 200;
-    font-size: 30px;
+    font-size: 2rem;
     line-height: 48px;
     letter-spacing: 0.1em;
 }
 
-.profile a small{
-    background-color: #1D1F4F;
-    
-    padding: 10px;
-
-    border-radius: 10px;
-
-    font-weight: 600;
-    font-size: 22px;
+.descricao h2{    
+    font-size: 1.5rem;
     line-height: 33px;
     letter-spacing: 0.1em;
 }
 
-/* ======= LINKS ======== */
-
-.sidebarLinks{
-    display: flex;
-    flex-direction: column;
-
-    gap: 20px;
-
+.links {
+    margin-top: 40px;
 }
 
-.links ul li a{
-    font-weight: 800;
+.links nav a{
     font-size: 25px;
     line-height: 30px;
     letter-spacing: 0.05em;
-
-    color:#fff;
+    color: #fff;
 
     transition: .5s;
 }
 
-.links ul li a:hover{
-    color: #0ED9E6;
+.links nav a:hover{
+    color: #0ED9E5;
+    font-weight: 700;
 }
 
-/* ======= MAIN ======== */
+/* MAIN */
 
-main .discovery h1{
+main{
+    margin-left: 50px;
+}
+
+.discovery{
+    margin-top: 3%;
+}
+
+.discovery h1{
+    font-size: 2.5rem;
+
+    margin-bottom: 3%;
+}
+
+/* GALERIA */
+
+/*
+    Max-width de 70 para nao cortar
+    minha ultima img
+*/
+
+.galeria{
+    display: flex;
+    
+    max-width: 70vw;
+    padding: 10px;
+
+    overflow-x: auto;
+}
+
+.galeria img{
+    width: 250px;
+    margin-right: 20px;
+}
+
+.videos{
+    margin-top: 50px;
+}
+
+.videos h1{
+    font-size: 2.5rem;
+
+    margin-bottom: 3%;
+}
+
+/* ABOUT ME */
+
+.about{
+    margin-top: 50px;
+}
+
+
+.aboutMe h1{
+    font-size: 2rem;
+
+    margin-bottom: 3%;
+}
+
+.aboutMe p{
+    width: 60vw;
+
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 36px;
+
+    text-align: justify;
+
+    padding: 10px;
+}
+
+/* CONTACT ME */
+
+.contactMe{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.contactMe h1{
+    font-size: 2rem;
+
+    margin-bottom: 3%;
+}
+
+.contactMe ul {
+    display: flex;
+
+    gap: 20px;
+}
+
+.contactMe ul a{
     font-weight: bold;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 36px;
 }
 
-.galeriaFotos ul li{
-
+.contactMe ul img{
+    width: 150px;
 }
